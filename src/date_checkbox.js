@@ -22,7 +22,7 @@ let dayOnWeek = [];
 let newDayOfWeek = firstDayOfWeek.getDate();
 for (i = 0; i < 7; i++) {
     if (newDayOfWeek != dayInMonth) {
-        newDayOfWeek = new Date(year, month - 1, firstDayOfWeek.getDate() + i);
+        newDayOfWeek = new Date(year, month, firstDayOfWeek.getDate() + i);
     } else {
         newDayOfWeek = new Date(year, month + 1, i - lastDayOfWeek.getDate())
     }

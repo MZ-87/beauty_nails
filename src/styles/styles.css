@@ -357,15 +357,15 @@ p {
     max-width: 200px;
   }
 }
-.services-prices {
+.price-calculator {
   background-color: #e6e9ee;
 }
-.services-prices span {
+.price-calculator span {
   display: inline-block;
   margin-bottom: 20px;
   margin-right: 30px;
 }
-.services-prices__title {
+.price-calculator__title {
   text-align: center;
   margin: 0 auto;
   font-family: "Montserrat", Arial, sans-serif;
@@ -375,18 +375,18 @@ p {
   padding-top: 120px;
   margin-bottom: 50px;
 }
-.services-prices__content {
+.price-calculator__content {
   width: 100%;
   background: white;
 }
-.services-prices__content_flex {
+.price-calculator__content_flex {
   display: flex;
   padding: 2rem;
 }
-.services-prices__calc {
+.price-calculator__calc {
   width: 50%;
 }
-.services-prices__calc p {
+.price-calculator__calc p {
   margin-left: 0;
   font-size: 1.2rem;
 }
@@ -409,13 +409,13 @@ p {
 }
 
 @media screen and (max-width: 767px) {
-  .services-prices__title {
+  .price-calculator__title {
     font-size: 1.8rem;
   }
-  .services-prices__img {
+  .price-calculator__img {
     display: none;
   }
-  .services-prices__title {
+  .price-calculator__title {
     font-size: 1.5rem;
     margin-left: 0;
     padding-top: 3rem;

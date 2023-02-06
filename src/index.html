@@ -26,36 +26,36 @@
   <div class="wrapper">
     <header id="header">
       <!-- класс content-container ограничивает ширину внутреннего содержания блока и ставит по центру-->
-      
+
       <div class="header__nav-container" id="header">
         <div class="content-container">
-        <nav class="header__nav navbar navbar-expand-lg">
-          <a class="header__nav-brand navbar-brand mr-5" href="#">Beauty <br />Nails</a>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="header__nav-link navbar-nav mr-auto">
-              <a class="nav-item nav-link mr-4 p-2" href="#">УСЛУГИ И ЦЕНЫ</a>
-              <a class="nav-item nav-link mr-4 p-2" href="#">ОТЗЫВЫ</a>
-              <a class="nav-item nav-link mr-4 p-2" href="#">МАГАЗИН</a>
-              <a class="nav-item nav-link mr-4 p-2" href="#">КОНТАКТЫ</a>
+          <nav class="header__nav navbar navbar-expand-lg">
+            <a class="header__nav-brand navbar-brand mr-5" href="#">Beauty <br />Nails</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="header__nav-link navbar-nav mr-auto">
+                <a class="nav-item nav-link mr-4 p-2" href="#">УСЛУГИ И ЦЕНЫ</a>
+                <a class="nav-item nav-link mr-4 p-2" href="#">ОТЗЫВЫ</a>
+                <a class="nav-item nav-link mr-4 p-2" href="#">МАГАЗИН</a>
+                <a class="nav-item nav-link mr-4 p-2" href="#">КОНТАКТЫ</a>
+              </div>
+              <a class="header__nav-phone nav-item nav-link" href=tel:"+99999999999">+9 (999) 999-99-99</a>
             </div>
-            <a class="header__nav-phone nav-item nav-link" href=tel:"+99999999999">+9 (999) 999-99-99</a>
-          </div>
-          <div class="navbar navbar-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-        </nav>
-      </div>
+            <div class="navbar navbar-light">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
-      <main>
-        <!-- блок 1 – название и баннер -->
-        <div class="banner">
+    <main>
+      <!-- блок 1 – название и баннер -->
+      <section class="banner">
         <!-- <div class="content-container"> -->
-          <div class="banner__container">
+        <div class="banner__container">
           <div class="banner__left-container">
             <h5>Сеть салонов красоты в Москве</h5>
             <h1>Маникюр, педикюр, брови и ресницы</h1>
@@ -68,8 +68,8 @@
             <img src="../src/images/girl.jpg" class="banner_img" alt="banner">
           </div>
         </div>
-      <!-- </div> -->
-    </div>
+        <!-- </div> -->
+      </section>
 
       <!-- блок 2 Услуги -->
       <section class="block2">
@@ -118,7 +118,8 @@
 
                 <div class="item-wrapper item-wrapper_userphone">
                   <label for="phone" class="item__label">Введите Ваш номер телефона</label>
-                  <input type="tel" id="phone" class="item__input" maxlength="11" minlength="11" name="phone" required />
+                  <input type="tel" id="phone" class="item__input" maxlength="11" minlength="11" name="phone"
+                    required />
                 </div>
                 <!-- Выбор специалиста -->
                 <div class="item-wrapper item-wrapper_master">
@@ -281,7 +282,7 @@
       </section>
 
       <!-- блок 4 Галерея мастеров -->
-      <section>
+      <section class="masters">
         <div class="slider__container">
           <h2>Выберите своего мастера</h2>
           <div class="content-container">
@@ -328,21 +329,20 @@
         </div>
       </section>
 
-
-        <!-- блок 5 Услуги и цены – калькулятор -->
-        <section class="services-prices" id="prices">
-          <div class="content-container">
-            <h2 class="services-prices__title">Услуги и цены</h2>
-            <div class="services-prices__content">
-              <div class="services-prices__content_flex">
-                <div class="services-prices__calc calc">
-                  <p class="calc__title">Маникюр</p>
-                  <div class="calc__box">
-                    <form action="" class="calc__form" onchange="getPrice()">
-                      <div class="calc__flex">
+      <!-- блок 5 Услуги и цены – калькулятор -->
+      <section class="price-calculator services-prices" id="prices">
+        <div class="content-container">
+          <h2 class="price-calculator__title">Услуги и цены</h2>
+          <div class="price-calculator__content">
+            <div class="price-calculator__content_flex">
+              <div class="price-calculator__calc calc">
+                <p class="calc__title">Маникюр</p>
+                <div class="calc__box">
+                  <form action="" class="calc__form" onchange="getPrice()">
+                    <div class="calc__flex">
                       <div class="calc__item">
                         <span>Выберите маникюр</span>
-                        
+
                         <select name="" class="select-val">
                           <option value="2000" selected>Классический</option>
                           <option value="2200">Комбинированный</option>
@@ -354,26 +354,15 @@
                         <span>Дополнительно</span>
                         <div>
 
-                          <input
-                            type="checkbox"
-                            name=""
-                            value="200"
-                            class="select-val"
-                            id="remove"
-                          /><label class="" for="remove">снятие</label><br />
+                          <input type="checkbox" name="" value="200" class="select-val" id="remove" /><label class=""
+                            for="remove">снятие</label><br />
 
-                          <input
-                            type="checkbox"
-                            name="package"
-                            value="500"
-                            class="select-val"
-                            id="alignment"
-                          />
+                          <input type="checkbox" name="package" value="500" class="select-val" id="alignment" />
                           <label class="" for="alignment">выравнивание</label>
                         </div>
                       </div>
-                          
-                          
+
+
                       <div class="calc__item">
                         <span>Выберите покрытие</span>
                         <select name="" class="select-val">
@@ -382,7 +371,7 @@
                           <option value="300">Второе</option>
                         </select>
                       </div>
-                        
+
                       <div class="calc__item">
                         <span>Добавим дизайн?</span>
                         <select name="" class="select-val">
@@ -397,433 +386,424 @@
                         <p id="js-result-sum">2000 руб.</p>
                       </div>
                     </div>
-                    </form>
-                    
-                    <a href="#popup" class="popup-content__open">Записаться</a>
-                  </div>
-                </div>
-                <div class="services-prices__img">
-                  <img alt="hands" src="./images/hands2.jpg">
+                  </form>
 
-              </div>
-              <div class="services-prices__img"></div>
-            </div>
-          </div>
-        </div>
-
-  </div>
-
-
-  </section>
-
-  <!-- блок 6 Стоимость услуг – прайс -->
-  <section>
-    <div class="container__price">
-      <div class="content-container">
-        <h3 class="container__price-header">
-          <span>СТОИМОСТЬ УСЛУГ</span>
-        </h3>
-
-        <div class="price-service">
-          <div class="service__card">
-            <div class="slide">
-              <label for="slide1">
-                <p class="slide_text">
-                  <span>⬇⬇⬇</span>
-                  Посмотреть цены на комбинированные услуги
-                  <span>⬇⬇⬇</span>
-                </p>
-              </label>
-              <input type="checkbox" id="slide1" />
-              <div class="close__all">
-
-                <h4 class="service__title">
-                  <span>Комбинированные услуги</span>
-                </h4>
-                <!-- <hr> -->
-                <!-- аккордеон -->
-                <div class="accordion" id="accordion-1">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">Маникюр + покрытие</p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_manicure-top">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- аккордеон -->
-                <!-- <hr> -->
-                <!-- Маникюр + Покрытие -->
-
-                <!-- Маникюр + Покрытие + Снятие-->
-                <div class="accordion" id="accordion-2">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">
-                        Маникюр + покрытие + снятие
-                      </p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_manicure-top-remove">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Маникюр + Покрытие + Снятие-->
-
-                <!-- Маникюр + Покрытие + Выравнивание-->
-                <div class="accordion" id="accordion-3">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">
-                        Маникюр + покрытие + выравнивание
-                      </p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_manicure-top-alignment">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Маникюр + Покрытие + Выравнивание-->
-
-                <!-- Маникюр + Покрытие + Выравнивание + Снятие-->
-                <div class="accordion" id="accordion-4">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">
-                        Маникюр + покрытие + выравнивание + снятие
-                      </p>
-                    </div>
-                    <div class="accordion__body">
-
-                      <div class="service__list_manicure-top-alignment-remove">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Маникюр + Покрытие + Выравнивание + Снятие-->
-
-                <!-- Маникюр + Укрепление ногтевой пластины-->
-                <div class="accordion" id="accordion-5">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">
-                        Маникюр + укрепление ногтевой пластины
-                      </p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_manicure-strengthening">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Маникюр + Укрепление ногтевой пластины-->
-
-                <!-- Педикюр + покрытие-->
-                <div class="accordion" id="accordion-6">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">Педикюр + покрытие</p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_pedicure-top">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Педикюр + покрытие-->
-
-                <!-- Педикюр + покрытие + снятие-->
-                <div class="accordion" id="accordion-7">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">
-                        Педикюр + покрытие + снятие
-                      </p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_pedicure-top-remove">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Педикюр + покрытие + снятие-->
-
-                <!-- Педикюр + укрепление ногтевой пластины-->
-                <div class="accordion" id="accordion-8">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">
-                        Педикюр + укрепление ногтевой пластины
-                      </p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_pedicure-strengthening">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <a href="#popup" class="popup-content__open">Записаться</a>
                 </div>
               </div>
-            </div>
-            <!-- <hr> -->
-            <!-- Педикюр + укрепление ногтевой пластины-->
-            <div class="slide">
-              <label for="slide2">
-                <p class="slide_text">
-                  <span>⬇⬇⬇</span> Посмотреть цены на моноуслуги<span>⬇⬇⬇</span>
-                </p>
-              </label>
-              <input type="checkbox" id="slide2" />
-              <div class="close__all">
-
-                <h4 class="service__title"><span>Моноуслуги</span></h4>
-                <!-- <hr> -->
-                <!-- Маникюр-->
-                <div class="accordion" id="accordion-9">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">Маникюр</p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_manicure">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Маникюр-->
-
-                <!-- Педикюр-->
-                <div class="accordion" id="accordion-10">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">Педикюр</p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_pedicure">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Педикюр-->
-
-                <!-- Покрытие-->
-                <div class="accordion" id="accordion-11">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">Покрытие</p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_top">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Покрытие-->
-
-                <!-- Дизайн (за 1 ноготь)-->
-                <div class="accordion" id="accordion-12">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">
-                        Дизайн (за 1 ноготь)
-                      </p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_design">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Дизайн (за 1 ноготь)-->
-
-                <!-- Уход-->
-                <div class="accordion" id="accordion-13">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">Уход</p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_care">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Уход-->
-
-                <!-- Моделирование и коррекция-->
-                <div class="accordion" id="accordion-14">
-                  <div class="accordion__item accordion__item_show">
-                    <div class="accordion__header">
-                      <p class="service__title_item">
-                        Моделирование и коррекция
-                      </p>
-                    </div>
-                    <div class="accordion__body">
-                      <div class="service__list_correction">
-                        <div class="card__menu">
-                          <span class="service__text"></span>
-                          <span class="service__text"></span>
-                        </div>
-                      </div>
-                      <p class="text_note">
-                        *в стоимость входит маникюр. Покрытие гель-лаком в
-                        стоимость не входит
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- <hr> -->
-                <!-- Моделирование и коррекция-->
+              <div class="price-calculator__img">
+                <img alt="hands" src="./images/hands2.jpg">
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-
-  <!-- блок 7 Подарочные сертификаты -->
-  <section>
-    <div class="content-container">
-      <div class="container__gift-certificates">
-        <div class="text">
-          <h3 class="gift-certificates_header">Подарочные сертификаты</h3>
-          <p class="gift-certificates_text">Купить подарочный сертификат можно прямо на нашем сайте или в одном из
-            салонов.</p>
-        </div>
-        <div class="sertificate1">
-          <div class="sertificate_text">
-            <p id="sertificate" class="js-sertificate_text">СЕРТИФИКАТ 1000 РУБЛЕЙ</p>
-          </div>
-        </div>
-
-        <div class="sertificate2">
-          <div class="sertificate_text">
-            <p id="sertificate2" class="js-sertificate_text2">СЕРТИФИКАТ 3000 РУБЛЕЙ</p>
-          </div>
-        </div>
-        <div class="sertificate3">
-          <div class="sertificate_text">
-            <p id="sertificate3" class="js-sertificate_text3">СЕРТИФИКАТ 5000 РУБЛЕЙ</p>
-          </div>
-        </div>
-        <div class="sertificate4">
-          <div class="sertificate_text">
-            <p id="sertificate4" class="js-sertificate_text4">СЕРТИФИКАТ 7000 РУБЛЕЙ</p>
-          </div>
-        </div>
-        <div class="sertificate5">
-          <div class="sertificate_text">
-            <p id="sertificate5" class="js-sertificate_text5">СЕРТИФИКАТ 10000 РУБЛЕЙ</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-        <!-- блок 8 Контакты – карта -->
-        <section class="contacts">
+      <!-- блок 6 Стоимость услуг – прайс -->
+      <section class="pricelist">
+        <div class="container__price">
           <div class="content-container">
-            <h2 class="contacts__title">Контакты</h2>
-              <div class="contacts__flex">
-                <div class="contacts__text">
-                  <p>Москва</p>
-                  <p>Погорельский переулок, 6</p>
-                  <a href=tel:"+99999999999999">тел: +9 (999) 999-99-99</a>
-        </div>
-        <div class="contacts__map" id="map"></div>
-      </div>
-    </div>
-    </div>
-  </section>
-  </main>
+            <h3 class="container__price-header">
+              <span>СТОИМОСТЬ УСЛУГ</span>
+            </h3>
 
-  <footer>
-    <div class="content-container">
-      <div class="footer__container">
-        <div class="flex-column navbar navbar-expand-lg">
-          <div class="footer__nav-brand navbar m-auto">
-            <a class="navbar-brand" href="#">Beauty <br />Nails</a>
+            <div class="price-service">
+              <div class="service__card">
+                <div class="slide">
+                  <label for="slide1">
+                    <p class="slide_text">
+                      <span>⬇⬇⬇</span>
+                      Посмотреть цены на комбинированные услуги
+                      <span>⬇⬇⬇</span>
+                    </p>
+                  </label>
+                  <input type="checkbox" id="slide1" />
+                  <div class="close__all">
+
+                    <h4 class="service__title">
+                      <span>Комбинированные услуги</span>
+                    </h4>
+                    <!-- <hr> -->
+                    <!-- аккордеон -->
+                    <div class="accordion" id="accordion-1">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">Маникюр + покрытие</p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_manicure-top">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- аккордеон -->
+                    <!-- <hr> -->
+                    <!-- Маникюр + Покрытие -->
+
+                    <!-- Маникюр + Покрытие + Снятие-->
+                    <div class="accordion" id="accordion-2">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">
+                            Маникюр + покрытие + снятие
+                          </p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_manicure-top-remove">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Маникюр + Покрытие + Снятие-->
+
+                    <!-- Маникюр + Покрытие + Выравнивание-->
+                    <div class="accordion" id="accordion-3">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">
+                            Маникюр + покрытие + выравнивание
+                          </p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_manicure-top-alignment">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Маникюр + Покрытие + Выравнивание-->
+
+                    <!-- Маникюр + Покрытие + Выравнивание + Снятие-->
+                    <div class="accordion" id="accordion-4">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">
+                            Маникюр + покрытие + выравнивание + снятие
+                          </p>
+                        </div>
+                        <div class="accordion__body">
+
+                          <div class="service__list_manicure-top-alignment-remove">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Маникюр + Покрытие + Выравнивание + Снятие-->
+
+                    <!-- Маникюр + Укрепление ногтевой пластины-->
+                    <div class="accordion" id="accordion-5">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">
+                            Маникюр + укрепление ногтевой пластины
+                          </p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_manicure-strengthening">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Маникюр + Укрепление ногтевой пластины-->
+
+                    <!-- Педикюр + покрытие-->
+                    <div class="accordion" id="accordion-6">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">Педикюр + покрытие</p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_pedicure-top">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Педикюр + покрытие-->
+
+                    <!-- Педикюр + покрытие + снятие-->
+                    <div class="accordion" id="accordion-7">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">
+                            Педикюр + покрытие + снятие
+                          </p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_pedicure-top-remove">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Педикюр + покрытие + снятие-->
+
+                    <!-- Педикюр + укрепление ногтевой пластины-->
+                    <div class="accordion" id="accordion-8">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">
+                            Педикюр + укрепление ногтевой пластины
+                          </p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_pedicure-strengthening">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <hr> -->
+                <!-- Педикюр + укрепление ногтевой пластины-->
+                <div class="slide">
+                  <label for="slide2">
+                    <p class="slide_text">
+                      <span>⬇⬇⬇</span> Посмотреть цены на моноуслуги<span>⬇⬇⬇</span>
+                    </p>
+                  </label>
+                  <input type="checkbox" id="slide2" />
+                  <div class="close__all">
+
+                    <h4 class="service__title"><span>Моноуслуги</span></h4>
+                    <!-- <hr> -->
+                    <!-- Маникюр-->
+                    <div class="accordion" id="accordion-9">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">Маникюр</p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_manicure">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Маникюр-->
+
+                    <!-- Педикюр-->
+                    <div class="accordion" id="accordion-10">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">Педикюр</p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_pedicure">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Педикюр-->
+
+                    <!-- Покрытие-->
+                    <div class="accordion" id="accordion-11">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">Покрытие</p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_top">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Покрытие-->
+
+                    <!-- Дизайн (за 1 ноготь)-->
+                    <div class="accordion" id="accordion-12">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">
+                            Дизайн (за 1 ноготь)
+                          </p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_design">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Дизайн (за 1 ноготь)-->
+
+                    <!-- Уход-->
+                    <div class="accordion" id="accordion-13">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">Уход</p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_care">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Уход-->
+
+                    <!-- Моделирование и коррекция-->
+                    <div class="accordion" id="accordion-14">
+                      <div class="accordion__item accordion__item_show">
+                        <div class="accordion__header">
+                          <p class="service__title_item">
+                            Моделирование и коррекция
+                          </p>
+                        </div>
+                        <div class="accordion__body">
+                          <div class="service__list_correction">
+                            <div class="card__menu">
+                              <span class="service__text"></span>
+                              <span class="service__text"></span>
+                            </div>
+                          </div>
+                          <p class="text_note">
+                            *в стоимость входит маникюр. Покрытие гель-лаком в
+                            стоимость не входит
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- Моделирование и коррекция-->
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="footer__nav-link navbar m-auto">
-            <a class="nav-item nav-link" href="#">УСЛУГИ И ЦЕНЫ</a>
-            <a class="nav-item nav-link" href="#">ОТЗЫВЫ</a>
-            <a class="nav-item nav-link" href="#">МАГАЗИН</a>
-            <a class="nav-item nav-link" href="#">КОНТАКТЫ</a>
+        </div>
+      </section>
+
+      <!-- блок 7 Подарочные сертификаты -->
+      <section class="gift-certificates">
+        <div class="content-container">
+          <div class="container__gift-certificates">
+            <div class="text">
+              <h3 class="gift-certificates_header">Подарочные сертификаты</h3>
+              <p class="gift-certificates_text">Купить подарочный сертификат можно прямо на нашем сайте или в одном из
+                салонов.</p>
+            </div>
+            <div class="sertificate1">
+              <div class="sertificate_text">
+                <p id="sertificate" class="js-sertificate_text">СЕРТИФИКАТ 1000 РУБЛЕЙ</p>
+              </div>
+            </div>
+
+            <div class="sertificate2">
+              <div class="sertificate_text">
+                <p id="sertificate2" class="js-sertificate_text2">СЕРТИФИКАТ 3000 РУБЛЕЙ</p>
+              </div>
+            </div>
+            <div class="sertificate3">
+              <div class="sertificate_text">
+                <p id="sertificate3" class="js-sertificate_text3">СЕРТИФИКАТ 5000 РУБЛЕЙ</p>
+              </div>
+            </div>
+            <div class="sertificate4">
+              <div class="sertificate_text">
+                <p id="sertificate4" class="js-sertificate_text4">СЕРТИФИКАТ 7000 РУБЛЕЙ</p>
+              </div>
+            </div>
+            <div class="sertificate5">
+              <div class="sertificate_text">
+                <p id="sertificate5" class="js-sertificate_text5">СЕРТИФИКАТ 10000 РУБЛЕЙ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- блок 8 Контакты – карта -->
+      <section class="contacts">
+        <div class="content-container">
+          <h2 class="contacts__title">Контакты</h2>
+          <div class="contacts__flex">
+            <div class="contacts__text">
+              <p>Москва</p>
+              <p>Погорельский переулок, 6</p>
+              <a href=tel:"+99999999999999">тел: +9 (999) 999-99-99</a>
+            </div>
+            <div class="contacts__map" id="map"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="content-container">
+        <div class="footer__container">
+          <div class="flex-column navbar navbar-expand-lg">
+            <div class="footer__nav-brand navbar m-auto">
+              <a class="navbar-brand" href="#">Beauty <br />Nails</a>
+            </div>
+            <div class="footer__nav-link navbar m-auto">
+              <a class="nav-item nav-link" href="#">УСЛУГИ И ЦЕНЫ</a>
+              <a class="nav-item nav-link" href="#">ОТЗЫВЫ</a>
+              <a class="nav-item nav-link" href="#">МАГАЗИН</a>
+              <a class="nav-item nav-link" href="#">КОНТАКТЫ</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   </div>
-
   <!-- Скрипты -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

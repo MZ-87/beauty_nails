@@ -11,14 +11,14 @@
   transition: 0.5s all;
   overflow-y: scroll;
 
-  &__body {
+  &-body {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem 1rem;
   }
 
-  &__content {
+  &-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -27,29 +27,31 @@
     padding: 2rem 4rem;
     background-color: $card-body-bg;
     color: $main-text;
-  }
 
-  &__close {
-    position: absolute;
-    top: 0.6rem;
-    right: 0.6rem;
-    font-size: 2em;
-    color: $main-text;
-    text-decoration: none;
-    cursor: pointer;
+    &__close {
+      position: absolute;
+      top: 0.6rem;
+      right: 0.6rem;
+      font-size: 2em;
+      color: $main-text;
+      text-decoration: none;
+      cursor: pointer;
 
-    &:focus,
-    &:hover {
+      &:focus,
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &__open {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: $btn-price-main;
+      border: 2px solid $btn-price-main;
+      border-radius: 15px;
+      color: $main-text;
       text-decoration: none;
     }
-  }
-
-  &__open {
-    padding: 1.1rem 2rem;
-    background-color: #5fc369;
-    border: none;
-    cursor: pointer;
-    color: #ffffff;
   }
 
   &.open {
@@ -78,7 +80,7 @@
   }
 }
 
-.item {
+.item-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -94,9 +96,9 @@
     font-size: 1.1em;
   }
 
-  &__type,
-  &__date,
-  &__time {
+  &_type,
+  &_date,
+  &_time {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,7 +114,7 @@
 }
 
 /* Выбор услуги */
-.choose_type {
+.item-selection_type {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -130,10 +132,15 @@ input[type="checkbox"] {
   height: 1.5rem;
   margin-right: 0.3rem;
 }
+// .item__input_checkbox {
+//   width: 1.5rem;
+//   height: 1.5rem;
+//   margin-right: 0.3rem;
+// }
 
 /* Выбор мастера */
-.input,
-.choose_master {
+.item__input,
+.item-selection_master {
   min-width: 250px;
   min-height: 50px;
   text-align: center;
@@ -141,14 +148,14 @@ input[type="checkbox"] {
   border: 2px solid $page-bg-grey;
 }
 
-.input:-webkit-autofill,
-.input:-webkit-autofill:hover,
-.input:-webkit-autofill:focus,
-.input:-webkit-autofill:active {
+.item__input:-webkit-autofill,
+.item__input:-webkit-autofill:hover,
+.item__input:-webkit-autofill:focus,
+.item__input:-webkit-autofill:active {
   box-shadow: 0 0 0 30px white inset;
 }
 
-.option {
+.item-selection__option {
   min-width: 400px;
   min-height: 70px;
   margin: 0.5em auto;
@@ -212,8 +219,7 @@ p {
 }
 
 /* медиа запросы блок 3 */
-@media screen and (max-width: 1023px) {
-}
+@media screen and (max-width: 1023px) {}
 
 @media screen and (max-width: 767px) {
   .popup__content {
@@ -226,13 +232,13 @@ p {
 }
 
 @media screen and (max-width: 575px) {
-  .popup__content {
+  .popup-content {
     max-width: 400px;
     padding-top: 1.2rem;
     padding-bottom: 1rem;
   }
 
-  .item {
+  .item-wrapper {
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
 

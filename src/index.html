@@ -60,7 +60,7 @@
             <h5>Сеть салонов красоты в Москве</h5>
             <h1>Маникюр, педикюр, брови и ресницы</h1>
             <div class="banner__btns">
-              <a href="#popup" class="popup__open">Записаться</a>
+              <a href="#popup" class="popup-content__open">Записаться</a>
               <a href="#prices" class="banner__btns-price">Узнать стоимость</a>
             </div>
           </div>
@@ -83,7 +83,7 @@
                 У нас вы найдёте самые уникальные и интересные оттенки. А наши
                 мастера воплотят любые ваши идеи дизайна.
               </p>
-              <a href="#popup" class="popup__open">Записаться</a>
+              <a href="#popup" class="popup-content__open">Записаться</a>
               <img src="./images/legs.jpg" alt="" class="service-list_img" />
             </div>
 
@@ -94,46 +94,46 @@
                 У нас вы найдёте самые уникальные и интересные оттенки. А наши
                 мастера воплотят любые ваши идеи дизайна.
               </p>
-              <a href="#popup" class="popup__open">Записаться</a>
+              <a href="#popup" class="popup-content__open">Записаться</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- блок 3 Выберите мастера -->
-      <section>
+      <section class="booking">
         <div class="content-container">
           <!-- Запись -->
           <div class="popup" id="popup">
-            <div class="popup__body">
+            <div class="popup-body">
               <!-- <div class=""> -->
-              <form action="" class="popup__content" id="booking">
+              <form action="" class="popup-content" id="booking">
 
-                <a href="#header" class="popup__close">&#215;</a>
+                <a href="#header" class="popup-content__close">&#215;</a>
                 <!-- Данные клиента -->
-                <div class="item item_username">
-                  <label for="first_name">Введите Ваше имя</label>
-                  <input type="text" id="username" class="input" name="username" required />
+                <div class="item-wrapper item-wrapper_username">
+                  <label for="first_name" class="item__label">Введите Ваше имя</label>
+                  <input type="text" id="username" class="item__input" name="username" required />
                 </div>
 
-                <div class="item item_userphone">
-                  <label for="phone">Введите Ваш номер телефона</label>
-                  <input type="tel" id="phone" class="input" maxlength="11" minlength="11" name="phone" required />
+                <div class="item-wrapper item-wrapper_userphone">
+                  <label for="phone" class="item__label">Введите Ваш номер телефона</label>
+                  <input type="tel" id="phone" class="item__input" maxlength="11" minlength="11" name="phone" required />
                 </div>
                 <!-- Выбор специалиста -->
-                <div class="item item_master">
-                  <label for="master">Выберите специалиста</label>
-                  <select name="person" id="master" class="choose_master">
-                    <option value="none" class="option" default></option>
-                    <option value="Мария Усманова" class="option">Мария Усманова</option>
-                    <option value="Ирина Петрова" class="option">Ирина Петрова</option>
-                    <option value="Татьяна Лютова" class="option">Татьяна Лютова</option>
+                <div class="item-wrapper item-wrapper_master">
+                  <label for="master" class="item__label">Выберите специалиста</label>
+                  <select name="person" id="master" class="item-selection item-selection_master">
+                    <option value="none" class="item-selection__option" default></option>
+                    <option value="Мария Усманова" class="item-selection__option">Мария Усманова</option>
+                    <option value="Ирина Петрова" class="item-selection__option">Ирина Петрова</option>
+                    <option value="Татьяна Лютова" class="item-selection__option">Татьяна Лютова</option>
                   </select>
                 </div>
                 <!-- Выбор услуги -->
-                <div class="item item__type">
-                  <h5>Выберите услуги</h5>
-                  <div class="choose_type">
+                <div class="item-wrapper item-wrapper_type">
+                  <h5 class="item__title">Выберите услуги</h5>
+                  <div class="item-selection item-selection_type">
                     <div class="type">
                       <input type="checkbox" name="procedure" id="manicure" value="маникюр">
                       <label for="manicure">Маникюр</label>
@@ -149,7 +149,7 @@
                   </div>
                 </div>
                 <!-- Выбор даты -->
-                <div class="item item__date">
+                <div class="item-wrapper item-wrapper_date">
                   <h5>Выберите дату</h5>
                   <div class="week-box">
                     <div id="mon_checkbox" class="day_item">
@@ -209,7 +209,7 @@
                   </div>
                 </div>
                 <!-- Выбор времени -->
-                <div class="item item__time">
+                <div class="item-wrapper item-wrapper_time">
                   <h5>Выберите время</h5>
                   <div class="choose_time">
                     <div class="time" onclick="select(this)">
@@ -263,16 +263,16 @@
                   </div>
                 </div>
 
-                <a href="#popup_2" class="popup__open confirm">Записаться</a>
+                <a href="#popup_2" class="popup-content__open confirm">Записаться</a>
               </form>
             </div>
           </div>
         </div>
         <!-- Подтверждение -->
         <div class="popup" id="popup_2">
-          <div class="popup__body">
-            <div class="popup__content">
-              <a href="#header" class="popup__close close-popup-js">&#215;</a>
+          <div class="popup-body">
+            <div class="popup-content">
+              <a href="#header" class="popup-content__close close-popup-js">&#215;</a>
               <div class="confirmation"></div>
             </div>
           </div>
@@ -291,7 +291,7 @@
                 <div class="item_col">
                   <h3>Мария Усманова</h3>
                   <p>Маникюр, педикюр, наращивание ногтей</p>
-                  <a href="#popup" class="popup__open">Записаться</a>
+                  <a href="#popup" class="popup-content__open">Записаться</a>
                 </div>
 
                 <img id="slider__img" src="images/master.jpg" alt="" />
@@ -302,7 +302,7 @@
                 <div class="item_col">
                   <h3>Ирина Петрова</h3>
                   <p>Маникюр, педикюр, наращивание ногтей</p>
-                  <a href="#popup" class="popup__open">Записаться</a>
+                  <a href="#popup" class="popup-content__open">Записаться</a>
 
                 </div>
                 <img id="slider__img" src="images/master2.jpg" alt="" />
@@ -314,7 +314,7 @@
                 <div class="item_col">
                   <h3>Татьяна Лютова</h3>
                   <p>Маникюр, педикюр, наращивание ногтей</p>
-                  <a href="#popup" class="popup__open">Записаться</a>
+                  <a href="#popup" class="popup-content__open">Записаться</a>
                 </div>
                 <img id="slider__img" src="images/master3.jpg" alt="" />
                 <a class="next" onclick="nextSlide()">&#10095;</a>
@@ -399,7 +399,7 @@
                     </div>
                     </form>
                     
-                    <a href="#popup" class="popup__open">Записаться</a>
+                    <a href="#popup" class="popup-content__open">Записаться</a>
                   </div>
                 </div>
                 <div class="services-prices__img">

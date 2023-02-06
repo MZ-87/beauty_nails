@@ -1,7 +1,7 @@
 'use strict'
 //Всплывающее окно с формой записи 
-const openPopupButtons = document.querySelectorAll('.popup__open'); //кнопки-ссылки открытия
-const closePopupButtons = document.querySelectorAll('.popup__close'); //кнопки-ссылки закрытия
+const openPopupButtons = document.querySelectorAll('.popup-content__open'); //кнопки-ссылки открытия
+const closePopupButtons = document.querySelectorAll('.popup-content__close'); //кнопки-ссылки закрытия
 
 for (let openPopupButton of openPopupButtons) {
     openPopupButton.addEventListener('click', (event) => {
@@ -35,7 +35,7 @@ const popupOpen = (currentPopup) => {
     currentPopup.addEventListener('click', (event) => {
         //если у кликнутого объекта нет в родителях объекта с классом .popup__content,
         //а это все объекты за пределами <div class="popup__content">, 
-        if (!event.target.closest('.popup__content')) {
+        if (!event.target.closest('.popup-content')) {
             //то мы этот попап закрываем, то есть передаем в функцию закрытия ближайший объект с классом .popup
             popupClose(event.target.closest('.popup'));
         }
